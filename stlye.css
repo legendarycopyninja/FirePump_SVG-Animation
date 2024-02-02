@@ -2,4 +2,38 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+}
+
+body {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;   
+}
+
+#pipe4 {
+    fill: url(#animatedWaterGradient);
+}
+
+@keyframes flow {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+#animatedWaterGradient stop:nth-child(1) {
+    stop-color: #00f;
+}
+
+#animatedWaterGradient stop:nth-child(2) {
+    stop-color: #0af;
+    animation: flow 10s linear infinite;
+}
+
+#animatedWaterGradient stop:nth-child(3) {
+    stop-color: #00f;
 }
